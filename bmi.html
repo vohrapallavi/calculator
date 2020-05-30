@@ -1,0 +1,162 @@
+<html>
+<head>
+	<title>BMI</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">	
+	<style type="text/css">
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+	body{
+		background:url(https://image.shutterstock.com/image-photo/flat-lay-huge-group-fresh-260nw-212634169.jpg);
+		/*linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(taj.jpg);*/
+		background-size: 100% 120%;
+		background-position:center;
+		background-repeat: none;
+
+	}
+ div#nav{
+   	width: 100%;
+   	height:70px;
+   	background-color: red;
+}
+h1{
+   text-align: center;
+   font-family: cursive;
+   font-weight: bold;
+   color: green;
+
+}
+div#form{
+
+  width: 60%;
+  height:950px;
+  background-color: pink;
+  margin-left: 300px;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-top: 3px;
+
+}
+#form ul li{
+
+font-weight: bold;
+font-size: 40px;
+font-family: cursive;
+color: red;
+text-align: center;
+}
+#form ul{
+	list-style-type: none;
+}
+#form input{
+
+padding-left: 10px;
+	height: 40px;
+	border: 2px solid black;
+	border-radius: 10px;
+	font-size: 30px;
+	color: red;
+}
+
+#form button{
+	width: 250px;
+	height: 70px;
+	background-color: green;
+	color: yellow;
+	font-family: cursive;
+	font-size: 40px;
+
+}
+#form button:hover{
+background-color:blue;
+
+}
+#form li #image{
+  border: 2px solid black;
+  border-radius:5px;
+  box-shadow: blue;
+
+}
+#form li #result,#symptom{
+  color: blue;
+}
+</style>
+ 
+
+
+
+</head>
+<body>
+	<div id="nav">
+
+     <h1> BMI CALCULATOR </h1>
+	</div>
+
+
+
+	<div id="form">
+     
+    
+        <ul>
+
+         <li><label > ENTER YOUR WEIGHT  </label></li>
+         <br>
+         <li ><input id="wgt" type ="text" value="in kgs eg:42"/></li>
+         <br>
+         <li><label > ENTER YOUR HEIGHT </label></li>
+         <br>
+         <li ><input id="hgt" type ="text" value="in Cms eg:159" /></li>
+         <br>
+        <li> <button onclick="mybmi()">calculate </button></li>
+        
+        <li><p id="result"></p></li> 
+        
+        <li id="symptom"></li>
+        <br>
+        <li id="image"><img src="https://i.udemycdn.com/redactor/raw/2018-11-04_01-52-48-2aba9e6d99b92919d49d29a61b749809.jpg" width=500px height=300px></li>
+        <li>Healthy BMI range: 18.5 kg/m2 - 25 kg/m2</li>
+     </ul>
+      </form>
+    
+	</div>
+
+	<script type="text/javascript">
+ 
+   
+
+  function mybmi() {
+
+   var weight=(document.getElementById("wgt").value);
+    var height=(document.getElementById("hgt").value);
+// alert(weight);
+    var h=(height*height)/10000;
+ 
+    var cal=Math.trunc(weight/h);
+     
+ 
+
+    document.getElementById("result").innerHTML=cal;
+    if(cal<18.5)
+    {
+    document.getElementById("symptom").innerHTML="under-weight";
+    }
+    else if(cal>=18 && cal<=24)
+    {
+      document.getElementById("symptom").innerHTML="you are normal";
+    }
+   else if(cal>24){
+    document.getElementById("symptom").innerHTML="over-weight";
+   }
+  	
+  }
+     
+
+
+
+
+	</script>
+
+</body>
+</html>
