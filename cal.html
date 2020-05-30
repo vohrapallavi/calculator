@@ -1,0 +1,125 @@
+<html>
+<head>
+	<title>cal</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+	<style type="text/css">
+    input{
+    	width: 60px;
+    	height: 50px;
+    }
+    #final{
+    	width: 270px;
+    	height: 50px;
+        font-size: 30px;
+        box-shadow: 1px 2px 10px black;
+        font-family: 'Bangers', cursive;
+        color: #D81B60;
+        background-color: pink;
+    }
+    h2{
+        margin-left: 50px;
+        font-size: 50px;
+        font-family: 'Pacifico', cursive;
+        color: red;
+    }
+    ul{
+        list-style-type: none;
+        margin-top: 20px;
+    }
+ 
+ #box{
+    width: 350px;
+    height: 450px;
+    background-color: #8E24AA;
+    border: 2px solid black;
+    margin-left: 390px;
+
+    border-radius: 15px;
+ }
+ input{
+    border: 2px solid black;
+ }
+ #no{
+    background-color: blue;
+    font-weight: bold;
+    font-family: 'Bangers', cursive;
+    font-size: 27px;
+    border-radius: 3px;
+    box-shadow: 1px 2px 10px white;
+    margin: 2px;
+
+ }
+ #no:hover{
+    background-color: #FF0266;
+ }
+ .container{
+    padding: 20px;
+
+ }
+
+
+
+	</style>
+</head>
+<body>
+    
+    <div class="container">
+        
+	<h2 class="text-center">calculator</h2>
+
+    <div id="box">
+	<form name="forms">
+
+    <ul>
+     <li><input type="text" name="result" id="final"></li>
+     <br>
+     <li>
+     <input id="no" type="button" value="1" onclick="forms.result.value +='1' " >
+     <input id="no"type="button" value="2" onclick="forms.result.value +='2' ">
+     <input id="no"type="button" value="3" onclick="forms.result.value +='3' ">
+     <input id="no"type="button" value="+" onclick="forms.result.value +='+' ">
+     </li>
+     <br>
+      <li>
+     <input id="no"type="button" value="4" onclick="forms.result.value +='4' ">
+     <input id="no"type="button" value="5" onclick="forms.result.value +='5' ">
+     <input id="no"type="button" value="6" onclick="forms.result.value +='6' ">
+     <input id="no"type="button" value="-" onclick="forms.result.value +='-' ">
+     </li>
+     <br>
+      <li>
+     <input id="no"type="button" value="7" onclick="forms.result.value +='7' ">
+     <input id="no"type="button" value="8" onclick="forms.result.value +='8' ">
+     <input id="no"type="button" value="9" onclick="forms.result.value +='9' ">
+     <input id="no"type="button" value="*" onclick="forms.result.value +='*' ">
+     </li><br>
+     <li>
+     <input id="no"type="button" value="0" onclick="forms.result.value +='0' ">
+     <input id="no" type="button" value="=" onclick="forms.result.value = eval(forms.result.value)">
+     <input id="no"type="button" value="%" onclick="forms.result.value +='%' ">
+     <input id="no"type="button" value="/" onclick="forms.result.value +='/' ">
+ </li> 
+ <br>
+ <li><input type="button" value="clear all" id="final" onclick="forms.result.value =' ' "></li>
+
+	</ul>
+    <br><br><br>
+</form>
+</div>
+
+</div>
+
+	<script type="text/javascript">
+ 
+
+
+	</script>
+
+</body>
+</html>
